@@ -64,9 +64,16 @@ class Ui_MainWindow(object):
 		self.lasButton.setGeometry(QtCore.QRect(190, 60, 171, 61))
 		self.lasButton.setObjectName("lasButton")
 		self.lasButton.clicked.connect(self.writeToLAS)
+		
 		self.nameOfFileTextEdit = QtWidgets.QTextEdit(self.groupBox_2)
-		self.nameOfFileTextEdit.setGeometry(QtCore.QRect(150, 20, 211, 31))
+		self.nameOfFileTextEdit.setGeometry(QtCore.QRect(150, 20, 211-60, 31))
 		self.nameOfFileTextEdit.setObjectName("nameOfFileTextEdit")
+		
+		self.las2Button = QtWidgets.QPushButton(self.groupBox_2)
+		self.las2Button.setGeometry(QtCore.QRect(300, 20, 60, 31))
+		self.las2Button.setObjectName("lasButton")
+		self.las2Button.clicked.connect(self.openWriteFile)
+		
 		self.groupBox_2.raise_()
 		self.groupBox.raise_()
 		self.visualizeButton.raise_()
@@ -113,6 +120,7 @@ class Ui_MainWindow(object):
 " na format .xyz"))
 		self.lasButton.setText(_translate("MainWindow", "Przekonwertuj dane \n"
 " na format .las"))
+		self.las2Button.setText(_translate("MainWindow", "Przeglądaj"))
 		self.menuFile.setTitle(_translate("MainWindow", "Plik"))
 		self.actionWyjd_z_programu.setText(_translate("MainWindow", "Wyjdź z programu"))
 
@@ -124,6 +132,12 @@ class Ui_MainWindow(object):
 	def openGPSFile(self):
 		options = QFileDialog.Options()
 		self.missionFile, _ = QFileDialog.getOpenFileName(self.centralwidget, "Wybierz log programu Mission Planner", "", "Mission Planner's Log (*.log);;All Files (*)", options=options)
+
+	def openWriteFile(self):
+		options = QFileDialog.Options()
+		self.missionFile, _ = QFileDialog.getSaveFileName(self.centralwidget, "Wybierz log programu Mission Planner", "", "Mission Planner's Log (*.log);;All Files (*)", options=options)
+		self.nameOfFileTextEdit.setText("fdsfdsf")
+
 
 
 	def writeToXYZ(self):
