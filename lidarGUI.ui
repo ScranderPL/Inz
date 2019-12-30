@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>538</width>
+    <height>292</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="visualizeButton">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>130</y>
+      <width>121</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Wizualizacja danych</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>351</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Dane wejściowe</string>
+    </property>
+    <widget class="QPushButton" name="gpsButton">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>59</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Wybierz plik</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="lidarButton">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>26</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Wybierz plik</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lidarLabel">
+     <property name="geometry">
+      <rect>
+       <x>22</x>
+       <y>20</y>
+       <width>161</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Dane systemu LiDAR:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="gpsLabel">
+     <property name="geometry">
+      <rect>
+       <x>18</x>
+       <y>58</y>
+       <width>161</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Log z Mission Planner:</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>120</y>
+      <width>371</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Dane wyjściowe</string>
+    </property>
+    <widget class="QLabel" name="nameOfFileLabel">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Nazwa pliku wyjściowego 
+(bez rozszerzenia):</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="xyzButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>171</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Przekonwertuj dane 
+ na format .xyz</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="lasButton">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>60</y>
+       <width>171</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Przekonwertuj dane 
+ na format .las</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="nameOfFileTextEdit">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>20</y>
+       <width>211</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <zorder>groupBox_2</zorder>
+   <zorder>groupBox</zorder>
+   <zorder>visualizeButton</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>538</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>Plik</string>
+    </property>
+    <addaction name="actionWyjd_z_programu"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionWyjd_z_programu">
+   <property name="text">
+    <string>Wyjdź z programu</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
